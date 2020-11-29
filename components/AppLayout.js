@@ -1,53 +1,48 @@
-
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import Link from 'next/link';
-import { Menu, Input, Row, Col} from 'antd';
-import styled from 'styled-Components';
-import UserProfile from '../components/UserProfile' 
-import LoginForm from '../components/LoginForm'
+import PropTypes from 'prop-types';
+import { Col, Input, Menu, Row } from 'antd';
 
+import LoginForm from './LoginForm';
+import UserProfile from './UserProfile';
 
-const SearchInput = styled(Input.Search)`
-  vertical-align: middle;
- `;
+const dummy = {
+  nickname: '제로초',
+  Post: [],
+  Followings: [],
+  Followers: [],
+  isLoggedIn: false,
+};
 
-
-const AppLayout = ({children}) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  return(
+const AppLayout = ({ children }) => {
+  return (
     <div>
       <Menu mode="horizontal">
-      <Menu.Item>
-      <Link href ="/"><a>SPS</a></Link> 
-      </Menu.Item>
-      <Menu.Item>
-      <Link href ="/profile"><a>프로필</a></Link>
-      </Menu.Item>
-      <Menu.Item>
-      <SearchInput enterButton/>
-      </Menu.Item>
-      <Menu.Item>
-      <Link href ="/signup"><a>회원가입</a></Link>
-      </Menu.Item>
+        <Menu.Item key="home"><Link href="/"><a>노드버드</a></Link></Menu.Item>
+        <Menu.Item key="profile"><Link href="/profile"><a>프로필</a></Link></Menu.Item>
+        <Menu.Item key="mail">
+          <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
+        </Menu.Item>
       </Menu>
       <Row gutter={8}>
-      <Col xs={24} md={6}>
-        {isLoggedIn ? <UserProfile /> : <LoginForm />}
+        <Col xs={24} md={6}>
+          {dummy.isLoggedIn
+            ? <UserProfile />
+            : <LoginForm />}
         </Col>
-      <Col xs={24} md={12}>
-      {children}
-      </Col>
-      <Col xs={24} md={6}>
-        <a href="https://jaeho.dev" target="_blank" rel="noreferrer noopener" >Made by 때호링</a>
+        <Col xs={24} md={12}>
+          {children}
+        </Col>
+        <Col xs={24} md={6}>
+          <a href="https://www.zerocho.com" target="_blank" rel="noreferrer noopener">Made by ZeroCho</a>
         </Col>
       </Row>
     </div>
-  )
-
+  );
 };
+
 AppLayout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
 export default AppLayout;
