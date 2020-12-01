@@ -7,7 +7,7 @@ import LoginForm from './LoginForm';
 import UserProfile from './UserProfile';
 
 const dummy = {
-  nickname: '제로초',
+  nickname: 'web',
   Post: [],
   Followings: [],
   Followers: [],
@@ -18,7 +18,7 @@ const AppLayout = ({ children }) => {
   return (
     <div>
       <Menu mode="horizontal">
-        <Menu.Item key="home"><Link href="/"><a>노드버드</a></Link></Menu.Item>
+        <Menu.Item key="home"><Link href="/"><a>NH</a></Link></Menu.Item>
         <Menu.Item key="profile"><Link href="/profile"><a>프로필</a></Link></Menu.Item>
         <Menu.Item key="mail">
           <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
@@ -34,7 +34,7 @@ const AppLayout = ({ children }) => {
           {children}
         </Col>
         <Col xs={24} md={6}>
-          <a href="https://www.zerocho.com" target="_blank" rel="noreferrer noopener">Made by ZeroCho</a>
+          <a href="https://github.com/Nuung/NH-share-payment" target="_blank" rel="noreferrer noopener">Made by Nuung</a>
         </Col>
       </Row>
     </div>

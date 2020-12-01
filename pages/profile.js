@@ -5,8 +5,8 @@ import AppLayout from '../components/AppLayout';
 import FollowList from '../components/FollowList';
 
 const Profile = () => {
-  const followerList = [{ nickname: '제로초' }, { nickname: '바보' }, { nickname: '노드버드오피셜' }];
-  const followingList = [{ nickname: '제로초' }, { nickname: '바보' }, { nickname: '노드버드오피셜' }];
+  const followerList = [{ nickname: 'hello' }, { nickname: 'hello' }, { nickname: 'hello' }];
+  const followingList = [{ nickname: 'hello' }, { nickname: 'hello' }, { nickname: 'hello' }];
 
   return (
     <AppLayout>

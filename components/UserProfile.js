@@ -2,7 +2,7 @@ import { Avatar, Card, Button } from 'antd';
 import React,{useCallback} from 'react';
 
 const dummy = {
-  nickname: '제로초',
+  nickname: 'Web',
   Posts: [],
   Followings: [],
   Followers: [],
@@ -13,7 +13,7 @@ const UserProfile = () => {
   return (
     <Card
       actions={[
-        <div key="twit">짹짹<br />{dummy.Posts.length}</div>,
+        <div key="twit">hello<br />{dummy.Posts.length}</div>,
         <div key="following">팔로잉<br />{dummy.Followings.length}</div>,
         <div key="follower">팔로워<br />{dummy.Followers.length}</div>,
       ]}

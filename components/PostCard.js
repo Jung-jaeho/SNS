@@ -12,14 +12,14 @@ import FollowButton from './FollowButton';
 
 const dummyComments = [{
   User: {
-    nickname: 'nero',
+    nickname: 'web',
   },
-  content: '우와 개정판이 나왔군요~',
+  content: 'NH해커톤 화이팅',
 }, {
   User: {
     nickname: 'hero',
   },
-  content: '얼른 사고싶어요~',
+  content: 'NH해커톤 화이팅',
 }];
 
 const CardWrapper = styled.div`
