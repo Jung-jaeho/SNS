@@ -34,7 +34,7 @@ const AppLayout = ({ children }) => {
           {children}
         </Col>
         <Col xs={24} md={6}>
-          <a href="https://github.com/Nuung/NH-share-payment" target="_blank" rel="noreferrer noopener">Made by Nuung</a>
+          <a href="https://github.com/Nuung/NH-share-payment" target="_blank" rel="noreferrer noopener">Nuung</a>
         </Col>
       </Row>
     </div>
